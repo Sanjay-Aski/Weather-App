@@ -1,34 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Provider } from 'react-redux';
 import './App.css';
+import Body from './Components/Body/Body';
+import Footer from './Components/Footer';
 import Navbar from './Components/Navbar';
-
+import Store from './Wea_app/Store';
 function App() {
-  const [theme, setTheme] = useState('light');
-
-  const handleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    changeTheme(newTheme);
-  };
-
-  const changeTheme = (theme) => {
-    document.querySelector('html').classList.remove('light', 'dark');
-    document.querySelector('html').classList.add(theme);
-  };
+  
 
   return (
     <>
-    <Navbar></Navbar>
-      <button
-        className="dark:bg-slate-800 dark:text-white"
-        onClick={handleTheme}
-      >
-        Change theme For me
-      </button>
-
-      <div className="dark:bg-slate-800 dark:text-white bg-yellow-500 w-20 h-20">
-        hii
-      </div>
+      <Provider store={Store}>
+        <Navbar></Navbar>
+        <Body/>
+        <Footer/>
+      </Provider>
     </>
   );
 }
