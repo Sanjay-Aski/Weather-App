@@ -7,6 +7,7 @@ const initialState = {
     {
       id: nanoid(),
       city_name: "Kalyan",
+      region:"Maharashtra",
       country_name: "India",
       tz_id: "Asia/Kolkata",
       weatherState: "clear",
@@ -27,7 +28,7 @@ const initialState = {
 
 // Create a slice for weather data
 export const WeatherSlice = createSlice({
-  name: "Data", // Slice name
+  name: "Data",
   initialState,
   reducers: {
     // Add or update weather data
@@ -36,16 +37,20 @@ export const WeatherSlice = createSlice({
         (data) => data.city_name === action.payload.city_name
       );
       if (index !== -1) {
-        state.data[index] = { ...state.data[index], ...action.payload }; // Update existing data
+        state.data[index] = { ...state.data[index], ...action.payload };
       } else {
-        state.data.push(action.payload); // Add new data
+        state.data.push(action.payload);
       }
     },
 
     // Delete weather data based on the unique id
     deleteweatherdata: (state, action) => {
-      state.data = state.data.filter((data) => data.id !== action.payload);
+      const updatedData = state.data.filter((data) => data.id !== action.payload);
+      state.data = updatedData;
+      localStorage.removeItem('data');
+      localStorage.setItem('data', JSON.stringify(updatedData));
     },
+    
 
     // Update weather data based on id
     updateWeatherData: (state, action) => {

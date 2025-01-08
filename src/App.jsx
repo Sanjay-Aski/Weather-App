@@ -9,13 +9,13 @@ function App() {
   
 
   return (
-    <>
+    <div className='w-[1024px] lg:w-screen'>
       <Provider store={Store}>
         <Navbar></Navbar>
         <Body/>
         <Footer/>
       </Provider>
-    </>
+    </div>
   );
 }
 

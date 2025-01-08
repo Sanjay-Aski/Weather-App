@@ -16,7 +16,7 @@ function Type(props) {
         </div>
         <div>
             <span className="text-gray-400 dark:text-gray-300">{props.type_} </span>
-            <span className="font-semibold text-white dark:text-gray-200">{props.value} hPa</span>
+            <span className="font-semibold text-white dark:text-gray-200">{props.value} {props.unit}</span>
         </div>
     </div>
   )

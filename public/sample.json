@@ -46,7 +46,24 @@
     }
   }
 
-
+  {
+    "id": 1118428,
+    "name": "Kalyan",
+    "region": "Maharashtra",
+    "country": "India",
+    "lat": 19.25,
+    "lon": 73.15,
+    "url": "kalyan-maharashtra-india"
+  },
+  {
+    "id": 2499950,
+    "name": "Kalynivka",
+    "region": "Vinnyts'ka Oblast'",
+    "country": "Ukraine",
+    "lat": 49.47,
+    "lon": 28.53,
+    "url": "kalynivka-vinnytska-oblast-ukraine"
+  },
 
   {
     "location": {
@@ -73,3 +90,54 @@
     }
   }
 
+
+
+
+  [
+    {
+      "location": {
+        "name": "Thanesar",
+        "region": "Haryana",
+        "country": "India",
+        "lat": 29.9833,
+        "lon": 76.8167,
+        "tz_id": "Asia/Kolkata",
+        "localtime": "2025-01-07 18:41"
+      },
+      "current": {
+        "condition": {
+          "text": "Clear",
+          "icon": "//cdn.weatherapi.com/weather/64x64/night/113.png"
+        },
+        "temp_c": 14.8,
+        "humidity": 29,
+        "wind_mph": 9.4,
+        "wind_kph": 15.1,
+        "pressure_mb": 1013,
+        "vis_km": 10
+      } 
+    },
+    {
+      "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.5171,
+        "lon": -0.1062,
+        "tz_id": "Europe/London",
+        "localtime": "2025-01-07 17:10"
+      },
+      "current": {
+        "condition": {
+          "text": "Clear",
+          "icon": "//cdn.weatherapi.com/weather/64x64/night/113.png"
+        },
+        "temp_c": 5,
+        "humidity": 80,
+        "wind_mph": 12,
+        "wind_kph": 19.3,
+        "pressure_mb": 1021,
+        "vis_km": 8
+      }
+    }
+  ]
