@@ -21,7 +21,7 @@ const Left_Body = () => {
       const [city_name, regionName, countryName] = name_city.split("-").map((s) => s.trim());
       const apiKey = import.meta.env.VITE_API_KEY;
       const currentWeatherResponse = await fetch(
-        `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityName}`
+        `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityName}&aqi=yes`
       );
       const weatherData = await currentWeatherResponse.json();
       const astroResponse = await fetch(
@@ -40,7 +40,7 @@ const Left_Body = () => {
         humidity: weatherData.current.humidity,
         wind: weatherData.current.wind_kph,
         visibility: weatherData.current.vis_km,
-        AirQuality: weatherData.current.air_quality?.us_epa_index || 0,
+        AirQuality: weatherData.current.air_quality?.['us-epa-index'] || 0,
         pressure: weatherData.current.pressure_mb,
         date: weatherData.location.localtime.split(" ")[0],
         wind_kph: weatherData.current.wind_kph,

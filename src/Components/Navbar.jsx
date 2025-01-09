@@ -5,7 +5,7 @@ import Logo from '../assets/Logo.png';
 import { addWeatherdata } from '../WeatherFeatures/WeatherSlice';
 function Navbar() {
   const [theme, setTheme] = useState('light');
-  const [themeloc, setThemeLoc] = useState('/src/assets/lightIcon.png');
+  const [themeloc, setThemeLoc] = useState('/src/assets/lighti.png');
   const [searchIn, setSearchIn] = useState('');
   const [suggestion, setSuggestion] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -15,14 +15,14 @@ function Navbar() {
   useEffect(() => {
     const savedTheme = theme;
     setTheme(savedTheme);
-    setThemeLoc(savedTheme === 'light' ? '/src/assets/darkIcon.png' : '/src/assets/lightIcon.png');
+    setThemeLoc(savedTheme === 'light' ? '/src/assets/darki.png' : '/src/assets/lighti.png');
     changeTheme(savedTheme);
   }, []);
 
   const handleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
-    setThemeLoc(newTheme === 'light' ? '/src/assets/darkIcon.png' : '/src/assets/lightIcon.png');
+    setThemeLoc(newTheme === 'light' ? '/src/assets/darki.png' : '/src/assets/lighti.png');
     changeTheme(newTheme);
   };
 
@@ -65,7 +65,7 @@ function Navbar() {
       setSuggestion([]);
       const apiKey = import.meta.env.VITE_API_KEY;
       const currentWeatherResponse = await fetch(
-        `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityName}`
+        `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityName}&aqi=yes`
       );
       const weatherData = await currentWeatherResponse.json();
       const astroResponse = await fetch(
@@ -84,7 +84,7 @@ function Navbar() {
         humidity: weatherData.current.humidity,
         wind: weatherData.current.wind_kph,
         visibility: weatherData.current.vis_km,
-        AirQuality: weatherData.current.air_quality?.us_epa_index || 0,
+        AirQuality: weatherData.current.air_quality?.['us-epa-index'] || 0,
         pressure: weatherData.current.pressure_mb,
         date: weatherData.location.localtime.split(" ")[0],
         wind_kph: weatherData.current.wind_kph,
