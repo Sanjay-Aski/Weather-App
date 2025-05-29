@@ -1,0 +1,143 @@
+{
+    "location": {
+      "name": "Thanesar",
+      "region": "Haryana",
+      "country": "India",
+      "lat": 29.9833,
+      "lon": 76.8167,
+      "tz_id": "Asia/Kolkata",
+      "localtime_epoch": 1736255486,
+      "localtime": "2025-01-07 18:41"
+    },
+    "current": {
+      "last_updated_epoch": 1736254800,
+      "last_updated": "2025-01-07 18:30",
+      "temp_c": 14.8,
+      "temp_f": 58.7,
+      "is_day": 0,
+      "condition": {
+        "text": "Clear",
+        "icon": "//cdn.weatherapi.com/weather/64x64/night/113.png",
+        "code": 1000
+      },
+      "wind_mph": 9.4,
+      "wind_kph": 15.1,
+      "wind_degree": 297,
+      "wind_dir": "WNW",
+      "pressure_mb": 1013,
+      "pressure_in": 29.91,
+      "precip_mm": 0,
+      "precip_in": 0,
+      "humidity": 29,
+      "cloud": 0,
+      "feelslike_c": 13.9,
+      "feelslike_f": 57,
+      "windchill_c": 13.9,
+      "windchill_f": 57,
+      "heatindex_c": 14.8,
+      "heatindex_f": 58.7,
+      "dewpoint_c": -2.8,
+      "dewpoint_f": 27.1,
+      "vis_km": 10,
+      "vis_miles": 6,
+      "uv": 1,
+      "gust_mph": 19.7,
+      "gust_kph": 31.8
+    }
+  }
+
+  {
+    "id": 1118428,
+    "name": "Kalyan",
+    "region": "Maharashtra",
+    "country": "India",
+    "lat": 19.25,
+    "lon": 73.15,
+    "url": "kalyan-maharashtra-india"
+  },
+  {
+    "id": 2499950,
+    "name": "Kalynivka",
+    "region": "Vinnyts'ka Oblast'",
+    "country": "Ukraine",
+    "lat": 49.47,
+    "lon": 28.53,
+    "url": "kalynivka-vinnytska-oblast-ukraine"
+  },
+
+  {
+    "location": {
+      "name": "London",
+      "region": "City of London, Greater London",
+      "country": "United Kingdom",
+      "lat": 51.5171,
+      "lon": -0.1062,
+      "tz_id": "Europe/London",
+      "localtime_epoch": 1736269808,
+      "localtime": "2025-01-07 17:10"
+    },
+    "astronomy": {
+      "astro": {
+        "sunrise": "08:04 AM",
+        "sunset": "04:09 PM",
+        "moonrise": "11:20 AM",
+        "moonset": "12:35 AM",
+        "moon_phase": "Waxing Gibbous",
+        "moon_illumination": 50,
+        "is_moon_up": 0,
+        "is_sun_up": 0
+      }
+    }
+  }
+
+
+
+
+  [
+    {
+      "location": {
+        "name": "Thanesar",
+        "region": "Haryana",
+        "country": "India",
+        "lat": 29.9833,
+        "lon": 76.8167,
+        "tz_id": "Asia/Kolkata",
+        "localtime": "2025-01-07 18:41"
+      },
+      "current": {
+        "condition": {
+          "text": "Clear",
+          "icon": "//cdn.weatherapi.com/weather/64x64/night/113.png"
+        },
+        "temp_c": 14.8,
+        "humidity": 29,
+        "wind_mph": 9.4,
+        "wind_kph": 15.1,
+        "pressure_mb": 1013,
+        "vis_km": 10
+      } 
+    },
+    {
+      "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.5171,
+        "lon": -0.1062,
+        "tz_id": "Europe/London",
+        "localtime": "2025-01-07 17:10"
+      },
+      "current": {
+        "condition": {
+          "text": "Clear",
+          "icon": "//cdn.weatherapi.com/weather/64x64/night/113.png"
+        },
+        "temp_c": 5,
+        "humidity": 80,
+        "wind_mph": 12,
+        "wind_kph": 19.3,
+        "pressure_mb": 1021,
+        "vis_km": 8
+      }
+    }
+  ]
