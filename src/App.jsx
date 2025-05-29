@@ -9,7 +9,7 @@ function App() {
   
 
   return (
-    <div className='w-[1024px] lg:w-screen'>
+    <div className='w-[1024px] lg:w-screen min-h-screen bg-background-light dark:bg-background-dark'>
       <Provider store={Store}>
         <Navbar></Navbar>
         <Body/>

@@ -5,7 +5,7 @@ import Logo from '../assets/Logo.png';
 import { addWeatherdata } from '../WeatherFeatures/WeatherSlice';
 function Navbar() {
   const [theme, setTheme] = useState('light');
-  const [themeloc, setThemeLoc] = useState('/src/assets/lighti.png');
+  const [themeloc, setThemeLoc] = useState('/src/assets/lightIcon.png');
   const [searchIn, setSearchIn] = useState('');
   const [suggestion, setSuggestion] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -15,14 +15,14 @@ function Navbar() {
   useEffect(() => {
     const savedTheme = theme;
     setTheme(savedTheme);
-    setThemeLoc(savedTheme === 'light' ? '/src/assets/darki.png' : '/src/assets/lighti.png');
+    setThemeLoc(savedTheme === 'light' ? 'src/assets/darkIcon.png' : '/src/assets/lightIcon.png');
     changeTheme(savedTheme);
   }, []);
 
   const handleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
-    setThemeLoc(newTheme === 'light' ? '/src/assets/darki.png' : '/src/assets/lighti.png');
+    setThemeLoc(newTheme === 'light' ? 'src/assets/darkIcon.png' : '/src/assets/lightIcon.png');
     changeTheme(newTheme);
   };
 
@@ -110,16 +110,16 @@ function Navbar() {
 
   return (
     <>
-      <div className="sticky top-0 pt-4 left-0 pl-2 p-3 flex flex-row justify-between h-20 w-full bg-yellow-100 shadow-md dark:bg-slate-900">
+      <div className="sticky top-0 pt-4 left-0 pl-2 p-3 flex flex-row justify-between h-20 w-full bg-primary-light dark:bg-primary-dark shadow-md">
         <img
           src={Logo}
           alt="Logo"
-          className="rounded-2xl h-14 items-start bg-yellow-400 dark:bg-slate-700"
+          className="rounded-2xl h-14 items-start bg-secondary-light dark:bg-secondary-dark"
         />
 
         <div className="relative w-1/4">
           <input
-            className="focus:outline-none w-full pl-4 rounded-lg h-10 dark:text-gray-600 dark:bg-slate-200"
+            className="focus:outline-none w-full pl-4 rounded-lg h-10 text-text-light bg-surface-light dark:text-text-dark dark:bg-surface-dark border border-primary-light dark:border-primary-dark"
             type="text"
             placeholder="Search City/Country"
             value={searchIn}
@@ -127,17 +127,17 @@ function Navbar() {
           />
 
           {loading && (
-            <div className="absolute top-full left-0 w-full bg-white p-2 text-sm text-gray-600 border border-gray-300 rounded-md shadow-md mt-1">
+            <div className="absolute top-full left-0 w-full bg-surface-light dark:bg-surface-dark p-2 text-sm text-text-light dark:text-text-dark border border-primary-light dark:border-primary-dark rounded-md shadow-md mt-1">
               Loading...
             </div>
           )}
 
           {suggestion.length > 0 && (
-            <ul className="absolute top-full left-0 w-full active:bg-slate-800 dark:active:bg-slate-100 bg-white border border-gray-300 rounded-md shadow-lg mt-1 max-h-60 overflow-y-auto z-10">
+            <ul className="absolute top-full left-0 w-full bg-surface-light dark:bg-surface-dark border border-primary-light dark:border-primary-dark rounded-md shadow-lg mt-1 max-h-60 overflow-y-auto z-10">
               {suggestion.map((suggestion, index) => (
                 <li
                   key={index}
-                  className="px-4 py-2 cursor-pointer hover:bg-blue-100"
+                  className="px-4 py-2 cursor-pointer hover:bg-primary-light/20 dark:hover:bg-primary-dark/30 text-text-light dark:text-text-dark"
                   onClick={() => handleSuggestionClick(suggestion)}
                 >
                   {suggestion}
@@ -150,7 +150,7 @@ function Navbar() {
         <img
           src={themeloc}
           alt="Theme Icon"
-          className="pr-5 dark:bg-slate-900 cursor-pointer h-14"
+          className="mr-5 cursor-pointer p-2 h-14 bg-background-light dark:bg-background-dark rounded-full border border-secondary-light dark:border-secondary-dark"
           onClick={handleTheme}
         />
       </div>

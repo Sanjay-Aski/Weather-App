@@ -68,8 +68,8 @@ const Left_Body = () => {
   };  
 
   return (
-    <div className="rounded-2xl   w-full h-full bg-slate-900 p-4 text-white">
-      <div className="overflow-y-auto  max-h-[600px] scrollbar-hide">
+    <div className="rounded-2xl w-full h-full bg-surface-light dark:bg-surface-dark p-4 text-text-light dark:text-text-dark">
+      <div className="overflow-y-auto max-h-[600px] scrollbar-hide">
         {weaData.map((item) => {  
           const {
             id, city_name,region,country_name,  weatherState, temp, humidity: humidityValue, wind_kph,
@@ -80,7 +80,7 @@ const Left_Body = () => {
               key={id}
               id={id}
               onClick={() => handleSelectedId(id,`${city_name}-${region}-${country_name}`)}
-               className="flex active:bg-slate-950 flex-col items-center bg-gray-800 rounded-lg p-4 mb-4 shadow-md"
+               className="flex active:bg-primary-light/20 dark:active:bg-primary-dark/30 flex-col items-center bg-background-light dark:bg-background-dark rounded-lg p-4 mb-4 shadow-md transition-colors cursor-pointer"
             >
               <div  className="flex justify-between w-full mb-4">
                 <div className="flex items-center">
